@@ -109,7 +109,7 @@ class SpryKadenceACFBridge {
                             <tr>
                                 <th scope="row"><label for="spry_webhook_name">Webhook Name</label></th>
                                 <td>
-                                    <input type="text" id="spry_webhook_name" name="webhook_name" class="regular-text" placeholder="Support Ticket Form" required />
+                                    <input type="text" id="spry_webhook_name" name="webhook_name" class="regular-text" placeholder="Unique Webhook Name" required />
                                     <p class="description">Give this webhook a descriptive name</p>
                                 </td>
                             </tr>
@@ -130,24 +130,24 @@ class SpryKadenceACFBridge {
                             <tr>
                                 <th scope="row"><label for="spry_acf_fields">ACF Field Names</label></th>
                                 <td>
-                                    <textarea id="spry_acf_fields" name="acf_fields" rows="6" class="large-text" placeholder="client_name&#10;client_email&#10;support_priority&#10;support_description" required></textarea>
-                                    <p class="description">Enter one ACF field name per line. These should match your Kadence form field names.</p>
+                                    <textarea id="spry_acf_fields" name="acf_fields" rows="6" class="large-text" placeholder="Add the ACF Field Name, one per line." required></textarea>
+                                    <p class="description">Enter one ACF field name per line. Use these same names to map your fields in the Kadence form webhook field mapping settings</p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row"><label for="spry_title_field">Title Field (Optional)</label></th>
                                 <td>
-                                    <input type="text" id="spry_title_field" name="title_field" class="regular-text" placeholder="subject" />
+                                    <input type="text" id="spry_title_field" name="title_field" class="regular-text" placeholder="Custom Post Title" />
                                     <p class="description">ACF field name to use for post title (leave empty for auto-generated titles)</p>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="spry_category_mapping">Category Mapping (Optional)</label></th>
+                                <th scope="row"><label for="spry_category_mapping">Category Mapping (Optional). Only supports one taxomony per post-type.</label></th>
                                 <td>
-                                    <input type="text" id="spry_category_field" name="category_field" class="regular-text" placeholder="priority" />
-                                    <p class="description">ACF field name that should map to categories</p>
+                                    <input type="text" id="spry_category_field" name="category_field" class="regular-text" placeholder="ACF Taxonomy Name" />
+                                    <p class="description">ACF field taxomony name that should map to categories</p>
                                     <br><br>
-                                    <textarea id="spry_category_mapping" name="category_mapping" rows="4" class="large-text" placeholder="urgent:urgent&#10;high:high-priority&#10;medium:medium-priority&#10;low:low-priority"></textarea>
+                                    <textarea id="spry_category_mapping" name="category_mapping" rows="4" class="large-text" placeholder="example: value:category-slug"></textarea>
                                     <p class="description">Map field values to category slugs (format: value:category-slug, one per line)</p>
                                 </td>
                             </tr>
